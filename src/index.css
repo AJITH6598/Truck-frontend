@@ -956,32 +956,21 @@ body::before {
   padding: 0 32px;
 }
 
-/* Brand / Logo */
 .ob-nav-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  text-decoration: none;
   flex-shrink: 0;
 }
 
-.ob-brand-icon {
-  font-size: 22px;
-  color: var(--accent);
-  filter: drop-shadow(0 0 6px rgba(232, 65, 24, 0.5));
+.ob-brand-logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
-.ob-brand-text {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 16px;
-  font-weight: 800;
-  letter-spacing: 3px;
-  color: #ffffff;
-  text-transform: uppercase;
-}
-
-.ob-brand-accent {
-  color: var(--accent);
+.ob-brand-logo:hover {
+  transform: scale(1.05);
 }
 
 /* Desktop nav links */

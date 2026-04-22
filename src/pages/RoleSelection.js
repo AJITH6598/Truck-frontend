@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { FaTruck, FaBox, FaTruckMoving, FaArrowLeft } from 'react-icons/fa';
 import welcomeImg from '../images/welcome.png';
 
+import fleetLogo from '../images/fleetlink-logo.png';
+
 const roles = [
   { icon: <FaTruck />, name: 'Owner', desc: 'Manage fleets and transport operations', path: '/owner/login' },
   { icon: <FaBox />, name: 'Loader', desc: 'Handle cargo and loading activities', path: '/loader/login' },
@@ -19,9 +21,7 @@ const RoleSelection = () => {
       <div className="role-selection-card">
         <Link to="/" className="back-link"><FaArrowLeft style={{ marginRight: 8 }} /> Back</Link>
         <div className="role-header">
-          <span className="welcome-label">Welcome to</span>
-          <h1 className="main-title">TRUCK MANAGEMENT</h1>
-          <p style={{ color: 'var(--text-secondary)', fontSize: 14, letterSpacing: 1, marginBottom: 8 }}>Your smart transport management system</p>
+          <img src={fleetLogo} alt="FleetLink" style={{ height: 64, width: 'auto', marginBottom: 20 }} />
           <p className="subtitle">Select your role to get started</p>
         </div>
         <div className="role-grid">

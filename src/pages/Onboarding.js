@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaChevronRight, FaBars, FaTimes, FaTruckMoving } from 'react-icons/fa';
 import ThemeToggle from '../components/ThemeToggle';
+import fleetLogo from '../images/fleetlink-logo.png';
 import ownerImg from '../images/owner.png';
 import loaderImg from '../images/loader.png';
 import driverImg from '../images/driver.png';
@@ -96,8 +97,7 @@ const Onboarding = () => {
             <nav className="ob-top-nav">
                 {/* Brand / Logo — always visible */}
                 <div className="ob-nav-brand">
-                    <FaTruckMoving className="ob-brand-icon" />
-                    <span className="ob-brand-text">TRANSPORT<span className="ob-brand-accent"> MS</span></span>
+                    <img src={fleetLogo} alt="FleetLink" className="ob-brand-logo" />
                 </div>
 
                 {isMobile ? (
@@ -209,7 +209,7 @@ const Onboarding = () => {
                                 </span>
                             </button>
                         </div>
-                        <p style={{ textAlign: 'center', color: 'var(--accent)', fontSize: 10, marginTop: 20, letterSpacing: 2 }}>© 2026 [ PREMIUM LOGISTICS SYSTEM ]</p>
+                        <p style={{ textAlign: 'center', color: 'var(--accent)', fontSize: 10, marginTop: 20, letterSpacing: 2 }}>© 2026 [ FLEETLINK LOGISTICS ]</p>
                     </div>
                 </>
             )}

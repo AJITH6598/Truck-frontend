@@ -4,6 +4,7 @@ import { useAuth } from '../../context/AuthContext';
 import { driverLogin, getTransports } from '../../utils/api';
 import { FaTruckMoving, FaArrowLeft, FaExclamationTriangle, FaEye, FaEyeSlash, FaClock, FaTimesCircle } from 'react-icons/fa';
 import driverLogImg from '../../images/driver.log.png';
+import fleetLogo from '../../images/fleetlink-logo.png';
 
 const DriverLogin = () => {
   const [form, setForm] = useState({ transportName: '', identifier: '', password: '' });
@@ -70,6 +71,9 @@ const DriverLogin = () => {
       <img src={driverLogImg} alt="Driver Background" className="role-bg-image" />
       <div className="role-bg-overlay" />
       <div className="auth-card">
+        <div style={{ textAlign: 'center', marginBottom: 20 }}>
+          <img src={fleetLogo} alt="FleetLink" style={{ height: 50, width: 'auto' }} />
+        </div>
         <Link to="/roles" className="back-link"><FaArrowLeft style={{ marginRight: 8 }} /> Back to Roles</Link>
         <div className="brand-header">
           <span className="brand-icon"><FaTruckMoving /></span>

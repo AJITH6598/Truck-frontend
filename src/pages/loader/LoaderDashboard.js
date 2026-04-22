@@ -8,6 +8,7 @@ import Loader from '../../components/Loader';
 import { FaHome, FaPlus, FaBox, FaChartBar, FaBell, FaClock, FaCheckCircle, FaTruckMoving, FaExclamationTriangle, FaTruck, FaSyncAlt, FaCog, FaRoute } from 'react-icons/fa';
 import ThemeToggle from '../../components/ThemeToggle';
 import dashboardBg from '../../images/dashboard.png';
+import fleetLogo from '../../images/fleetlink-logo.png';
 
 const getVehicleSuggestion = (weight) => {
   const w = parseFloat(weight);
@@ -311,8 +312,8 @@ export default function LoaderDashboard() {
         transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)', 
         overflow: 'hidden' 
       }}>
-        <div style={{ padding: '20px 0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <span style={{ fontSize: 24, color: 'var(--accent)', flexShrink: 0 }}><FaBox /></span>
+        <div style={{ padding: '16px 8px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderBottom: '1px solid rgba(var(--accent-rgb), 0.1)' }}>
+          <img src={fleetLogo} alt="FleetLink" style={{ width: '80%', height: 'auto', objectFit: 'contain' }} />
         </div>
         <nav style={{ flex: 1, padding: '12px 0' }}>
           {NAV_ITEMS.map(item => (
@@ -374,7 +375,9 @@ export default function LoaderDashboard() {
           width: '100%',
           boxSizing: 'border-box'
         }}>
-          <div />
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+            <img src={fleetLogo} alt="FleetLink" style={{ height: 42, width: 'auto', objectFit: 'contain' }} />
+          </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? 12 : 20, height: '100%', transform: 'translateY(-4px)' }}>
             {!isMobile && (

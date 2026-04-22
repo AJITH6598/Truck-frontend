@@ -4,6 +4,7 @@ import { useAuth } from '../../context/AuthContext';
 import { ownerLogin } from '../../utils/api';
 import { FaTruck, FaArrowLeft, FaExclamationTriangle, FaEye, FaEyeSlash } from 'react-icons/fa';
 import ownerLogImg from '../../images/owner.log.png';
+import fleetLogo from '../../images/fleetlink-logo.png';
 
 const OwnerLogin = () => {
   const [form, setForm] = useState({ identifier: '', password: '' });
@@ -36,6 +37,9 @@ const OwnerLogin = () => {
       <div className="role-bg-overlay" />
 
       <div className="auth-card">
+        <div style={{ textAlign: 'center', marginBottom: 20 }}>
+          <img src={fleetLogo} alt="FleetLink" style={{ height: 50, width: 'auto' }} />
+        </div>
         <Link to="/roles" className="back-link"><FaArrowLeft style={{ marginRight: 8 }} /> Back to Roles</Link>
 
         <div className="brand-header">

@@ -7,6 +7,7 @@ import io from 'socket.io-client'; // ✅ NEW
 import { FaHome, FaSearch, FaRoad, FaFileAlt, FaTruckMoving, FaBell, FaKey, FaFlagCheckered, FaMapMarkerAlt, FaExclamationTriangle, FaCoffee, FaSyncAlt, FaCheckCircle, FaCog } from 'react-icons/fa';
 import ThemeToggle from '../../components/ThemeToggle';
 import dashboardBg from '../../images/dashboard.png';
+import fleetLogo from '../../images/fleetlink-logo.png';
 
 const NAV_ITEMS = [
   { key: 'dashboard', label: 'Dashboard', icon: <FaHome /> },
@@ -179,8 +180,8 @@ export default function DriverDashboard() {
         transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)', 
         overflow: 'hidden' 
       }}>
-        <div style={{ padding: '20px 0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <span style={{ fontSize: 24, color: 'var(--accent)', flexShrink: 0 }}><FaTruckMoving /></span>
+        <div style={{ padding: '16px 8px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderBottom: '1px solid rgba(var(--accent-rgb), 0.1)' }}>
+          <img src={fleetLogo} alt="FleetLink" style={{ width: '80%', height: 'auto', objectFit: 'contain' }} />
         </div>
         <nav style={{ flex: 1, padding: '12px 0' }}>
           {NAV_ITEMS.map(item => (
@@ -242,7 +243,9 @@ export default function DriverDashboard() {
           width: '100%',
           boxSizing: 'border-box'
         }}>
-          <div />
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+            <img src={fleetLogo} alt="FleetLink" style={{ height: 42, width: 'auto', objectFit: 'contain' }} />
+          </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? 12 : 20, height: '100%', transform: 'translateY(-4px)' }}>
             {!isMobile && (
@@ -614,7 +617,7 @@ export default function DriverDashboard() {
           )}
 
         </div>
-        <footer style={{ textAlign: 'center', padding: 16, color: 'var(--text-muted)', fontSize: 12, borderTop: '1px solid var(--border)', letterSpacing: 2 }}>© 2026 [ AJITH SIVAKUMAR ]</footer>
+        <footer style={{ textAlign: 'center', padding: 16, color: 'var(--text-muted)', fontSize: 12, borderTop: '1px solid var(--border)', letterSpacing: 2 }}>© 2026 [ FLEETLINK MANAGEMENT SYSTEM ]</footer>
       </div>
 
       <style>{`
