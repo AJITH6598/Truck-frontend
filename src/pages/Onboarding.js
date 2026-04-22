@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaChevronRight, FaBars, FaTimes, FaTruckMoving } from 'react-icons/fa';
+import { FaChevronRight, FaBars, FaTimes } from 'react-icons/fa';
 import ThemeToggle from '../components/ThemeToggle';
 import fleetLogo from '../images/fleetlink-logo.png';
 import ownerImg from '../images/owner.png';
